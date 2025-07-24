@@ -1,0 +1,40 @@
+
+.background-gif {
+  height: 150%;
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.hero-section {
+  width: 100%;
+  height: 400px; /* or use 100vh if you want full screen */
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.text-section {
+  background-color: #f8f9fa; /* Optional: background on text side */
+}
+
+
+.team-name {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* Centered text sections */
+.section-center {
+  text-align: center;
+}
+
+/* Image fit for cards */
+.card img {
+  object-fit: cover;
+  height: 250px;
+}
