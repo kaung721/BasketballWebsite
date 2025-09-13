@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Baytown Basketball Club Team Roster - Meet Our Players and Coaching Staff" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Team Roster - Baytown Basketball Club</title>
+  <link rel="icon" type="image/png" href="IMG_2654.png" />
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Index.html">
+        <img src="IMG_2654.png" alt="Baytown Basketball" height="40" class="me-2">
+        <span class="fw-bold">Baytown Basketball Club</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">
+              <i class="fas fa-home me-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">
+              <i class="fas fa-info-circle me-1"></i>About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Roster.html">
+              <i class="fas fa-users me-1"></i>Roster
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Schedule.html">
+              <i class="fas fa-calendar-alt me-1"></i>Schedule
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Register.html">
+              <i class="fas fa-user-plus me-1"></i>Join Team
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="display-4 fw-bold mb-4 fade-in">Team Roster</h1>
+          <p class="lead fade-in">
+            Meet the talented players and coaching staff that make up the Baytown Basketball Club family.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search and Filter Section -->
+  <section class="py-4 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <input type="text" class="form-control" id="playerSearch" placeholder="Search players by name or position...">
+          </div>
+        </div>
+        <div class="col-lg-6 mt-3 mt-lg-0">
+          <div class="d-flex gap-3">
+            <select class="form-select" id="positionFilter">
+              <option value="all">All Positions</option>
+              <option value="point-guard">Point Guard</option>
+              <option value="shooting-guard">Shooting Guard</option>
+              <option value="small-forward">Small Forward</option>
+              <option value="power-forward">Power Forward</option>
+              <option value="center">Center</option>
+            </select>
+            <button class="btn btn-outline-primary" id="resetFilters">
+              <i class="fas fa-refresh me-1"></i>Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaching Staff Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Coaching Staff</h2>
+        <p class="section-subtitle">
+          The experienced professionals leading our team to success
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="coach">
+            <img src="lebron.jpg" class="card-img-top" alt="Head Coach">
+            <div class="card-body text-center">
+              <h5 class="card-title">Coach Michael Johnson</h5>
+              <p class="card-text text-muted">Head Coach</p>
+              <div class="coach-info">
+                <p class="small text-muted mb-2">
+                  <i class="fas fa-trophy me-1"></i>
+                  15+ Years Experience
+                </p>
+                <p class="small text-muted mb-2">
+                  <i class="fas fa-graduation-cap me-1"></i>
+                  Former NBA Player
+                </p>
+                <p class="small text-muted">
+                  <i class="fas fa-medal me-1"></i>
+                  3x State Champion
+                </p>
+              </div>
+              <div class="coach-credentials mt-3">
+                <span class="badge bg-primary me-1">NBA Veteran</span>
+                <span class="badge bg-warning">Championship Coach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Players Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Players</h2>
+        <p class="section-subtitle">
+          Our talented roster of dedicated athletes
+        </p>
+      </div>
+      <div class="row g-4" id="playersContainer">
+        <!-- Player 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="point-guard">
+            <img src="steph.jpg" class="card-img-top" alt="Stephen Curry">
+            <div class="card-body text-center">
+              <h5 class="card-title">Stephen Curry</h5>
+              <p class="card-text text-muted">Point Guard</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'3"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">35</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#30</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">4x NBA Champion</span>
+                <span class="badge bg-warning">2x MVP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="shooting-guard">
+            <img src="lebron.jpg" class="card-img-top" alt="LeBron James">
+            <div class="card-body text-center">
+              <h5 class="card-title">LeBron James</h5>
+              <p class="card-text text-muted">Shooting Guard</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'9"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">39</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#23</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">4x NBA Champion</span>
+                <span class="badge bg-warning">4x MVP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="small-forward">
+            <img src="melo.jpeg" class="card-img-top" alt="Carmelo Anthony">
+            <div class="card-body text-center">
+              <h5 class="card-title">Carmelo Anthony</h5>
+              <p class="card-text text-muted">Small Forward</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'8"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">40</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#7</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">10x All-Star</span>
+                <span class="badge bg-warning">Olympic Gold</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="power-forward">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Kevin Durant" onerror="this.src='lebron.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Kevin Durant</h5>
+              <p class="card-text text-muted">Power Forward</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'10"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">35</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#35</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">2x NBA Champion</span>
+                <span class="badge bg-warning">1x MVP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="center">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Anthony Davis" onerror="this.src='steph.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Anthony Davis</h5>
+              <p class="card-text text-muted">Center</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'11"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">31</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#3</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">1x NBA Champion</span>
+                <span class="badge bg-warning">8x All-Star</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="point-guard">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Chris Paul" onerror="this.src='melo.jpeg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Chris Paul</h5>
+              <p class="card-text text-muted">Point Guard</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'0"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">38</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#3</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">12x All-Star</span>
+                <span class="badge bg-warning">Point God</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 7 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="shooting-guard">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Klay Thompson" onerror="this.src='lebron.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Klay Thompson</h5>
+              <p class="card-text text-muted">Shooting Guard</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'6"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">34</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#11</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">4x NBA Champion</span>
+                <span class="badge bg-warning">Splash Brother</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 8 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="small-forward">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Kawhi Leonard" onerror="this.src='steph.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Kawhi Leonard</h5>
+              <p class="card-text text-muted">Small Forward</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'7"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">32</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#2</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">2x NBA Champion</span>
+                <span class="badge bg-warning">2x Finals MVP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 9 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="power-forward">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Giannis Antetokounmpo" onerror="this.src='melo.jpeg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Giannis Antetokounmpo</h5>
+              <p class="card-text text-muted">Power Forward</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">6'11"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">29</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#34</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">1x NBA Champion</span>
+                <span class="badge bg-warning">2x MVP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 10 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in" data-position="center">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Joel Embiid" onerror="this.src='lebron.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Joel Embiid</h5>
+              <p class="card-text text-muted">Center</p>
+              <div class="player-stats">
+                <div class="row text-center">
+                  <div class="col-4">
+                    <small class="text-muted">Height</small>
+                    <div class="fw-bold">7'0"</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Age</small>
+                    <div class="fw-bold">30</div>
+                  </div>
+                  <div class="col-4">
+                    <small class="text-muted">Jersey</small>
+                    <div class="fw-bold">#21</div>
+                  </div>
+                </div>
+              </div>
+              <div class="player-achievements mt-2">
+                <span class="badge bg-primary me-1">1x MVP</span>
+                <span class="badge bg-warning">6x All-Star</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Statistics Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Team Statistics</h2>
+        <p class="section-subtitle">
+          Our performance highlights for the current season
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">25-5</h3>
+              <p class="text-muted">Win-Loss Record</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-basketball-ball fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">112.5</h3>
+              <p class="text-muted">Points Per Game</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">98.2</h3>
+              <p class="text-muted">Points Allowed</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">83.3%</h3>
+              <p class="text-muted">Win Percentage</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="fade-in">
+            <h2 class="mb-3">Want to Join This Amazing Team?</h2>
+            <p class="lead mb-0">
+              Think you have what it takes to be part of our championship roster? 
+              Apply now and start your journey with Baytown Basketball Club.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="fade-in">
+            <a href="Register.html" class="btn btn-warning btn-lg">
+              <i class="fas fa-user-plus me-2"></i>Join Our Team
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-primary mb-3">
+            <i class="fas fa-basketball-ball me-2"></i>Baytown Basketball Club
+          </h5>
+          <p class="text-muted">
+            Dedicated to excellence in basketball and community development. 
+            Join us in our journey to greatness on and off the court.
+          </p>
+          <div class="social-links">
+            <a href="#" class="text-primary me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-primary me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-primary"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-primary mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="Index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li><a href="About.html" class="text-muted text-decoration-none">About Us</a></li>
+            <li><a href="Roster.html" class="text-muted text-decoration-none">Team Roster</a></li>
+            <li><a href="Schedule.html" class="text-muted text-decoration-none">Schedule</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-primary mb-3">Team</h6>
+          <ul class="list-unstyled">
+            <li><a href="Register.html" class="text-muted text-decoration-none">Join Team</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">Coaching Staff</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">Statistics</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">News</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <h6 class="text-primary mb-3">Contact Info</h6>
+          <div class="contact-info">
+            <p class="text-muted mb-2">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              123 Basketball Court, Baytown, TX 77520
+            </p>
+            <p class="text-muted mb-2">
+              <i class="fas fa-phone me-2"></i>
+              (555) 123-BALL
+            </p>
+            <p class="text-muted">
+              <i class="fas fa-envelope me-2"></i>
+              info@baytownbasketball.com
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">&copy; 2024 Baytown Basketball Club. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted mb-0">Built with <i class="fas fa-heart text-danger"></i> for basketball</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

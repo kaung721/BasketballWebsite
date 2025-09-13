@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Baytown Basketball Club Schedule - Upcoming Games and Events" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Schedule - Baytown Basketball Club</title>
+  <link rel="icon" type="image/png" href="IMG_2654.png" />
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Index.html">
+        <img src="IMG_2654.png" alt="Baytown Basketball" height="40" class="me-2">
+        <span class="fw-bold">Baytown Basketball Club</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">
+              <i class="fas fa-home me-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">
+              <i class="fas fa-info-circle me-1"></i>About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Roster.html">
+              <i class="fas fa-users me-1"></i>Roster
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Schedule.html">
+              <i class="fas fa-calendar-alt me-1"></i>Schedule
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Register.html">
+              <i class="fas fa-user-plus me-1"></i>Join Team
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="display-4 fw-bold mb-4 fade-in">Game Schedule</h1>
+          <p class="lead fade-in">
+            Don't miss any of our exciting games! Check out our upcoming schedule and come support your team.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Filter Section -->
+  <section class="py-4 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="d-flex gap-3">
+            <button class="btn btn-primary active" id="allGames">All Games</button>
+            <button class="btn btn-outline-primary" id="homeGames">Home Games</button>
+            <button class="btn btn-outline-primary" id="awayGames">Away Games</button>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-3 mt-lg-0">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <input type="text" class="form-control" id="scheduleSearch" placeholder="Search games by opponent or venue...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Games Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Upcoming Games</h2>
+        <p class="section-subtitle">
+          Mark your calendar for these exciting matchups
+        </p>
+      </div>
+      
+      <div class="row g-4" id="gamesContainer">
+        <!-- Game 1 -->
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in" data-game-type="home">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div class="game-date text-primary fw-bold">MAR 15</div>
+                <div class="game-time">7:00 PM</div>
+                <span class="badge bg-primary">Home</span>
+              </div>
+              <div class="col-md-6">
+                <div class="game-teams text-center">
+                  <div class="team-name fw-bold">Baytown Basketball</div>
+                  <div class="vs-text text-muted">VS</div>
+                  <div class="opponent-name fw-bold">Georgian Grizzlies</div>
+                </div>
+                <div class="game-venue text-center mt-2">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Baytown Sports Complex
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                </button>
+                <div class="mt-2">
+                  <small class="text-muted">Tickets Available</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in" data-game-type="away">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div class="game-date text-primary fw-bold">MAR 22</div>
+                <div class="game-time">8:30 PM</div>
+                <span class="badge bg-warning">Away</span>
+              </div>
+              <div class="col-md-6">
+                <div class="game-teams text-center">
+                  <div class="team-name fw-bold">LA Lakers</div>
+                  <div class="vs-text text-muted">VS</div>
+                  <div class="opponent-name fw-bold">Baytown Basketball</div>
+                </div>
+                <div class="game-venue text-center mt-2">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Staples Center
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                </button>
+                <div class="mt-2">
+                  <small class="text-muted">Limited Availability</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in" data-game-type="home">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div class="game-date text-primary fw-bold">MAR 29</div>
+                <div class="game-time">7:30 PM</div>
+                <span class="badge bg-primary">Home</span>
+              </div>
+              <div class="col-md-6">
+                <div class="game-teams text-center">
+                  <div class="team-name fw-bold">Baytown Basketball</div>
+                  <div class="vs-text text-muted">VS</div>
+                  <div class="opponent-name fw-bold">Miami Heat</div>
+                </div>
+                <div class="game-venue text-center mt-2">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Baytown Sports Complex
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                </button>
+                <div class="mt-2">
+                  <small class="text-muted">Tickets Available</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 4 -->
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in" data-game-type="away">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div class="game-date text-primary fw-bold">APR 5</div>
+                <div class="game-time">8:00 PM</div>
+                <span class="badge bg-warning">Away</span>
+              </div>
+              <div class="col-md-6">
+                <div class="game-teams text-center">
+                  <div class="team-name fw-bold">Boston Celtics</div>
+                  <div class="vs-text text-muted">VS</div>
+                  <div class="opponent-name fw-bold">Baytown Basketball</div>
+                </div>
+                <div class="game-venue text-center mt-2">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  TD Garden
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                </button>
+                <div class="mt-2">
+                  <small class="text-muted">Sold Out</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 5 -->
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in" data-game-type="home">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div class="game-date text-primary fw-bold">APR 12</div>
+                <div class="game-time">7:00 PM</div>
+                <span class="badge bg-primary">Home</span>
+              </div>
+              <div class="col-md-6">
+                <div class="game-teams text-center">
+                  <div class="team-name fw-bold">Baytown Basketball</div>
+                  <div class="vs-text text-muted">VS</div>
+                  <div class="opponent-name fw-bold">Golden State Warriors</div>
+                </div>
+                <div class="game-venue text-center mt-2">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Baytown Sports Complex
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                </button>
+                <div class="mt-2">
+                  <small class="text-muted">Tickets Available</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 6 -->
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in" data-game-type="away">
+            <div class="row align-items-center">
+              <div class="col-md-3 text-center mb-3 mb-md-0">
+                <div class="game-date text-primary fw-bold">APR 19</div>
+                <div class="game-time">9:00 PM</div>
+                <span class="badge bg-warning">Away</span>
+              </div>
+              <div class="col-md-6">
+                <div class="game-teams text-center">
+                  <div class="team-name fw-bold">Phoenix Suns</div>
+                  <div class="vs-text text-muted">VS</div>
+                  <div class="opponent-name fw-bold">Baytown Basketball</div>
+                </div>
+                <div class="game-venue text-center mt-2">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Footprint Center
+                </div>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                </button>
+                <div class="mt-2">
+                  <small class="text-muted">Tickets Available</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Schedule Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Practice Schedule</h2>
+        <p class="section-subtitle">
+          Regular practice times and training sessions
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <h5 class="card-title text-primary">
+                <i class="fas fa-calendar-week me-2"></i>Weekly Practice
+              </h5>
+              <div class="practice-schedule">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold">Monday</span>
+                  <span class="text-muted">6:00 PM - 8:00 PM</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold">Wednesday</span>
+                  <span class="text-muted">6:00 PM - 8:00 PM</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold">Friday</span>
+                  <span class="text-muted">6:00 PM - 8:00 PM</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">Saturday</span>
+                  <span class="text-muted">10:00 AM - 12:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <h5 class="card-title text-primary">
+                <i class="fas fa-dumbbell me-2"></i>Strength & Conditioning
+              </h5>
+              <div class="practice-schedule">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold">Tuesday</span>
+                  <span class="text-muted">5:00 PM - 6:30 PM</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold">Thursday</span>
+                  <span class="text-muted">5:00 PM - 6:30 PM</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">Sunday</span>
+                  <span class="text-muted">2:00 PM - 4:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Season Statistics Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Season Statistics</h2>
+        <p class="section-subtitle">
+          Our performance highlights for the current season
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">25-5</h3>
+              <p class="text-muted">Overall Record</p>
+              <small class="text-success">83.3% Win Rate</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-home fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">15-2</h3>
+              <p class="text-muted">Home Record</p>
+              <small class="text-success">88.2% Win Rate</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-plane fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">10-3</h3>
+              <p class="text-muted">Away Record</p>
+              <small class="text-success">76.9% Win Rate</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-fire fa-3x text-primary mb-3"></i>
+              <h3 class="text-primary fw-bold">8</h3>
+              <p class="text-muted">Win Streak</p>
+              <small class="text-success">Current Streak</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticket Information Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Ticket Information</h2>
+        <p class="section-subtitle">
+          Get your tickets and join us for an unforgettable basketball experience
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-ticket-alt fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Single Game Tickets</h5>
+              <p class="card-text">Starting at $25</p>
+              <ul class="list-unstyled">
+                <li>General Admission</li>
+                <li>Premium Seating</li>
+                <li>VIP Packages</li>
+              </ul>
+              <button class="btn btn-primary">Buy Tickets</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Season Pass</h5>
+              <p class="card-text">Starting at $300</p>
+              <ul class="list-unstyled">
+                <li>All Home Games</li>
+                <li>Playoff Priority</li>
+                <li>Exclusive Benefits</li>
+              </ul>
+              <button class="btn btn-primary">Get Season Pass</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card text-center border-0 shadow-sm fade-in">
+            <div class="card-body">
+              <i class="fas fa-users fa-3x text-primary mb-3"></i>
+              <h5 class="card-title">Group Tickets</h5>
+              <p class="card-text">10+ People</p>
+              <ul class="list-unstyled">
+                <li>Group Discounts</li>
+                <li>Special Packages</li>
+                <li>Custom Arrangements</li>
+              </ul>
+              <button class="btn btn-primary">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="fade-in">
+            <h2 class="mb-3">Don't Miss the Action!</h2>
+            <p class="lead mb-0">
+              Join us for an exciting season of basketball. Get your tickets now and be part of the Baytown Basketball Club experience.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="fade-in">
+            <button class="btn btn-warning btn-lg">
+              <i class="fas fa-ticket-alt me-2"></i>Get Tickets Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-primary mb-3">
+            <i class="fas fa-basketball-ball me-2"></i>Baytown Basketball Club
+          </h5>
+          <p class="text-muted">
+            Dedicated to excellence in basketball and community development. 
+            Join us in our journey to greatness on and off the court.
+          </p>
+          <div class="social-links">
+            <a href="#" class="text-primary me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-primary me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-primary"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-primary mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="Index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li><a href="About.html" class="text-muted text-decoration-none">About Us</a></li>
+            <li><a href="Roster.html" class="text-muted text-decoration-none">Team Roster</a></li>
+            <li><a href="Schedule.html" class="text-muted text-decoration-none">Schedule</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-primary mb-3">Team</h6>
+          <ul class="list-unstyled">
+            <li><a href="Register.html" class="text-muted text-decoration-none">Join Team</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">Coaching Staff</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">Statistics</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">News</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <h6 class="text-primary mb-3">Contact Info</h6>
+          <div class="contact-info">
+            <p class="text-muted mb-2">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              123 Basketball Court, Baytown, TX 77520
+            </p>
+            <p class="text-muted mb-2">
+              <i class="fas fa-phone me-2"></i>
+              (555) 123-BALL
+            </p>
+            <p class="text-muted">
+              <i class="fas fa-envelope me-2"></i>
+              info@baytownbasketball.com
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">&copy; 2024 Baytown Basketball Club. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted mb-0">Built with <i class="fas fa-heart text-danger"></i> for basketball</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

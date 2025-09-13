@@ -3,96 +3,446 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Basketball Website" />
+  <meta name="description" content="Baytown Basketball Club - Premier Basketball Team" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Baytown Sports and Athletic Club</title>
-  <link rel="icon" type="image/png" href="./img/IMG_2654.png" />
+  <title>Baytown Basketball Club - Home</title>
+  <link rel="icon" type="image/png" href="IMG_2654.png" />
 
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="d-flex hero-section mb-3">
-      <div class="col-6 p-0">
-        <img src="./img/gif.gif" alt="Basketball GIF" class="img-fluid h-100 w-100 object-cover" />
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Index.html">
+        <img src="IMG_2654.png" alt="Baytown Basketball" height="40" class="me-2">
+        <span class="fw-bold">Baytown Basketball Club</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="Index.html">
+              <i class="fas fa-home me-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">
+              <i class="fas fa-info-circle me-1"></i>About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Roster.html">
+              <i class="fas fa-users me-1"></i>Roster
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Schedule.html">
+              <i class="fas fa-calendar-alt me-1"></i>Schedule
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Register.html">
+              <i class="fas fa-user-plus me-1"></i>Join Team
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="col-6 d-flex align-items-center justify-content-center text-section">
-        <h2 class="text-center">Baytown Athletic and Sports Club</h2>
-      </div>
-    </section>
+    </div>
+  </nav>
 
-  <!-- Who We Are Section -->
-  <section class="section-center container">
-    <h3 class="mb-3">Who We Are</h3>
-    <p class="lead">
-      We are a community-driven sports club dedicated to promoting basketball and other athletic activities in Baytown. Our mission is to provide a platform for athletes of all ages to develop their skills, compete, and enjoy the game.
-    </p>
-  </section>
-
-  <!-- Roster Section -->
-  <section class="container my-5">
-    <h3 class="text-center mb-4">Roster</h3>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="card text-center shadow-sm">
-          <img src="./img/lebron.jpg" class="card-img-top" alt="Photo of John Doe" />
-          <div class="card-body">
-            <h5 class="card-title">John Doe</h5>
-            <p class="card-text text-muted">Point Guard</p>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+          <div class="hero-content fade-in">
+            <h1 class="hero-title">Baytown Basketball Club</h1>
+            <p class="hero-subtitle">
+              Excellence on the court, character off the court. Join the premier basketball experience in Baytown.
+            </p>
+            <div class="hero-buttons">
+              <a href="Register.html" class="btn btn-warning btn-lg me-3">
+                <i class="fas fa-user-plus me-2"></i>Join Our Team
+              </a>
+              <a href="About.html" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-play me-2"></i>Learn More
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card text-center shadow-sm">
-          <img src="./img/melo.jpeg" class="card-img-top" alt="Photo of Alex Smith" />
-          <div class="card-body">
-            <h5 class="card-title">Alex Smith</h5>
-            <p class="card-text text-muted">Shooting Guard</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card text-center shadow-sm">
-          <img src="./img/steph.jpg" class="card-img-top" alt="Photo of Mike Lee" />
-          <div class="card-body">
-            <h5 class="card-title">Mike Lee</h5>
-            <p class="card-text text-muted">Center</p>
+        <div class="col-lg-6">
+          <div class="hero-image fade-in">
+            <img src="gif.gif" alt="Basketball Action" class="img-fluid rounded-3 shadow-lg">
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- View Full Roster Button -->
-    <div class="text-center mt-4">
-      <a href="./Roster.html" class="btn btn-primary">View Full Roster</a>
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-count="15">0</span>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-count="150">0</span>
+            <div class="stat-label">Games Won</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-count="25">0</span>
+            <div class="stat-label">Championships</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item fade-in">
+            <span class="stat-number" data-count="500">0</span>
+            <div class="stat-label">Players Trained</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-subtitle">
+          A community-driven basketball club dedicated to developing athletes and building character through the game we love.
+        </p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="fade-in">
+            <h3 class="mb-4">Our Mission</h3>
+            <p class="lead mb-4">
+              We are committed to providing a platform for athletes of all ages to develop their skills, 
+              compete at the highest level, and grow as individuals both on and off the court.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Professional coaching staff</li>
+              <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>State-of-the-art facilities</li>
+              <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Community outreach programs</li>
+              <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Academic support for student-athletes</li>
+            </ul>
+            <a href="About.html" class="btn btn-primary">Learn More About Us</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="fade-in">
+            <img src="IMG_2654.png" alt="Team Photo" class="img-fluid rounded-3 shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Players Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Meet Our Stars</h2>
+        <p class="section-subtitle">
+          Get to know some of our standout players who represent the excellence of Baytown Basketball Club.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="LeBron James" onerror="this.src='lebron.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">LeBron James</h5>
+              <p class="card-text text-muted">Small Forward</p>
+              <div class="player-stats">
+                <small class="text-muted">4x NBA Champion • 4x MVP</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Carmelo Anthony" onerror="this.src='melo.jpeg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Carmelo Anthony</h5>
+              <p class="card-text text-muted">Power Forward</p>
+              <div class="player-stats">
+                <small class="text-muted">10x All-Star • Olympic Gold Medalist</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card player-card fade-in">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop&crop=face" class="card-img-top" alt="Stephen Curry" onerror="this.src='steph.jpg'">
+            <div class="card-body text-center">
+              <h5 class="card-title">Stephen Curry</h5>
+              <p class="card-text text-muted">Point Guard</p>
+              <div class="player-stats">
+                <small class="text-muted">4x NBA Champion • 2x MVP</small>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="text-center mt-4 fade-in">
+        <a href="Roster.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-users me-2"></i>View Full Roster
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Upcoming Games Section -->
-  <section class="container my-5">
-    <h3 class="text-center mb-4">Upcoming Games</h3>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-5">
-        <div class="card shadow-sm">
-          <div class="card-body text-center">
-            <p class="card-text fs-5">Georgian Grizzlies vs Baytown Club</p>
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Upcoming Games</h2>
+        <p class="section-subtitle">
+          Don't miss our upcoming games! Come support your team and experience the excitement of Baytown Basketball.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <div class="game-date">March 15, 2024</div>
+                <div class="game-teams">Baytown Basketball vs Georgian Grizzlies</div>
+                <div class="game-venue">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Baytown Sports Complex
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary">7:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <div class="game-date">March 22, 2024</div>
+                <div class="game-teams">LA Lakers vs Baytown Basketball</div>
+                <div class="game-venue">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Staples Center
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-warning">8:30 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <div class="game-date">March 29, 2024</div>
+                <div class="game-teams">Baytown Basketball vs Miami Heat</div>
+                <div class="game-venue">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  Baytown Sports Complex
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary">7:30 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="schedule-item fade-in">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <div class="game-date">April 5, 2024</div>
+                <div class="game-teams">Boston Celtics vs Baytown Basketball</div>
+                <div class="game-venue">
+                  <i class="fas fa-map-marker-alt me-1"></i>
+                  TD Garden
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-warning">8:00 PM</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-5">
-        <div class="card shadow-sm">
-          <div class="card-body text-center">
-            <p class="card-text fs-5">Baytown Club vs LA Lakers</p>
+      <div class="text-center mt-4 fade-in">
+        <a href="Schedule.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-calendar-alt me-2"></i>View Full Schedule
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Team in Action</h2>
+        <p class="section-subtitle">
+          See our players in action during practice and games
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm fade-in">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop" class="card-img-top" alt="Basketball Practice" onerror="this.src='gif.gif'">
+            <div class="card-body">
+              <h5 class="card-title">Team Practice</h5>
+              <p class="card-text text-muted">Intense training sessions to improve our game</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm fade-in">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" class="card-img-top" alt="Game Action" onerror="this.src='gif.gif'">
+            <div class="card-body">
+              <h5 class="card-title">Game Action</h5>
+              <p class="card-text text-muted">Competitive matches showcasing our skills</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow-sm fade-in">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop" class="card-img-top" alt="Team Celebration" onerror="this.src='gif.gif'">
+            <div class="card-body">
+              <h5 class="card-title">Victory Celebration</h5>
+              <p class="card-text text-muted">Celebrating our wins together as a team</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="fade-in">
+            <h2 class="mb-3">Ready to Join the Team?</h2>
+            <p class="lead mb-0">
+              Whether you're a seasoned player or just starting out, we welcome athletes of all skill levels. 
+              Join the Baytown Basketball Club family today!
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="fade-in">
+            <a href="Register.html" class="btn btn-warning btn-lg">
+              <i class="fas fa-user-plus me-2"></i>Register Now
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bootstrap JS (Optional) -->
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 class="text-primary mb-3">
+            <i class="fas fa-basketball-ball me-2"></i>Baytown Basketball Club
+          </h5>
+          <p class="text-muted">
+            Dedicated to excellence in basketball and community development. 
+            Join us in our journey to greatness on and off the court.
+          </p>
+          <div class="social-links">
+            <a href="#" class="text-primary me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-primary me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-primary"><i class="fab fa-youtube fa-lg"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-primary mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="Index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li><a href="About.html" class="text-muted text-decoration-none">About Us</a></li>
+            <li><a href="Roster.html" class="text-muted text-decoration-none">Team Roster</a></li>
+            <li><a href="Schedule.html" class="text-muted text-decoration-none">Schedule</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-primary mb-3">Team</h6>
+          <ul class="list-unstyled">
+            <li><a href="Register.html" class="text-muted text-decoration-none">Join Team</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">Coaching Staff</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">Statistics</a></li>
+            <li><a href="#" class="text-muted text-decoration-none">News</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <h6 class="text-primary mb-3">Contact Info</h6>
+          <div class="contact-info">
+            <p class="text-muted mb-2">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              123 Basketball Court, Baytown, TX 77520
+            </p>
+            <p class="text-muted mb-2">
+              <i class="fas fa-phone me-2"></i>
+              (555) 123-BALL
+            </p>
+            <p class="text-muted">
+              <i class="fas fa-envelope me-2"></i>
+              info@baytownbasketball.com
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">&copy; 2024 Baytown Basketball Club. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted mb-0">Built with <i class="fas fa-heart text-danger"></i> for basketball</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
