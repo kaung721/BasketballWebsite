@@ -4,21 +4,21 @@ A modern, responsive website for the Baytown Basketball Club featuring a complet
 
 ## Features
 
-### 🏀 **Pages**
+### **Pages**
 - **Home (Index.html)** - Hero section with team highlights, stats, and featured players
 - **About (About.html)** - Team history, mission, coaching staff, and facilities
 - **Roster (Roster.html)** - Complete team roster with 10 players and coaching staff
 - **Schedule (Schedule.html)** - Upcoming games, practice schedule, and ticket information
 - **Register (Register.html)** - Comprehensive registration form for new team members
 
-### 🎨 **Design**
+### **Design**
 - **Color Scheme**: Cyan (#00BCD4) and Orange (#FF9800) primary colors
 - **Framework**: Bootstrap 5.3.3 for responsive design
 - **Icons**: Font Awesome 6.0.0 for modern iconography
 - **Typography**: Google Fonts (Roboto) for clean, professional appearance
 - **Animations**: Smooth fade-in effects and hover animations
 
-### ⚡ **Functionality**
+### **Functionality**
 - **Responsive Navigation**: Mobile-friendly navigation with collapsible menu
 - **Interactive Forms**: Registration form with validation and success feedback
 - **Search & Filter**: Player search and position filtering on roster page
@@ -126,7 +126,3 @@ The website uses CSS variables for easy color customization:
 ## License
 
 © 2024 Baytown Basketball Club. All rights reserved.
-
----
-
-Built with ❤️ for basketball enthusiasts
